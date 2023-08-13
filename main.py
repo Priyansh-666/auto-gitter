@@ -4,6 +4,7 @@ from tkinter import simpledialog
 def create_bat_file(username, web_address):
     # Define the content of the .bat file
     bat_content = f'''
+    git init
     git add .
     git commit -m "update"
     git remote add {username} {web_address}
