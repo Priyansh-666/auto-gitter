@@ -1,0 +1,23 @@
+
+name: CI/CD
+
+# Controls when the workflow will run
+on:
+  # Activates the workflow; then there is a push to the main or master branch
+  push:
+    branches: [main, master]
+
+  # allows you to manually execute this pipeline from the Actions tab.
+  workflow_dispatch:
+jobs:
+    # This workflow contains a single job called "build"
+    build:
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
+    
+        #
+        steps:
+        - uses: actions/checkout@v2  
+        - uses: actions/setup-python@v2  
+        - run:  pip install -r requirements.txt  # install requirements to enable GitHub run tests
+    
