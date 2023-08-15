@@ -26,6 +26,26 @@ The ```.yml``` will be created in ```.github/workflows``` and will be ready to b
 
 You can change ```.yml``` file as per your deployment host.
 
+# Usage to create and run docker image 
+
+```Currently is only for Python flask apps```
+
+```This is currently is beta stage , it might be a little problematic```
+
+Copy ```auto-commiter``` application in the current working directory of any program/software that you are making.
+
+Run ```auto-commiter``` and click on ```Open docker commands window``` .
+
+A small window appears asking you to type in your name of the image , keep any name that you want.
+
+Then run ```Create DockerFile```
+
+Then run ```Build Docker Image``` (It might show ```not responding``` but wait for 2 minutes)
+
+```WARNING``` create ```requirements.txt``` in the current working directory , mentioning all the libraries that you are using in your Python code
+
+Then run ```Run Docker Container```
+
 # Warning
 
 DONT FORGET TO SIGNUP ON GITHUB FROM YOUR COMPUTER
