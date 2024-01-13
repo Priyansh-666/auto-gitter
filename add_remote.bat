@@ -11,4 +11,4 @@ git commit -m "update"
 git remote add Priyansh-666 https://github.com/Priyansh-666/auto-gitter.git
 
 :: Push changes to the remote contribute branch
-git push Priyansh-666 contribute
+git push Priyansh-666 remotebat
