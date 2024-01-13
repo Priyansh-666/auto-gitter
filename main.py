@@ -6,12 +6,12 @@ import subprocess
 def create_bat_file(username, web_address, branch):
     # Define the content of the .bat file
     bat_content = f'''
+    @echo off
     git init
     git add .
     git commit -m "update"
     git branch {branch}
     git remote add {username} {web_address}
-    git rebase --continue
     git push {username} {branch}
     '''
 
