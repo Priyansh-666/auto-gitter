@@ -10,6 +10,7 @@ def create_bat_file(username, web_address, branch):
     git add .
     git commit -m "update"
     git remote add {username} {web_address}
+    git branch {branch}
     git push {username} {branch}
     '''
 
