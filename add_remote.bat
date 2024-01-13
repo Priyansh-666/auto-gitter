@@ -14,6 +14,7 @@ git remote add Priyansh-666 https://github.com/Priyansh-666/auto-gitter.git
 
 :: Fetch and rebase changes from the remote contribute branch
 git pull --rebase Priyansh-666 contribute
+git rebase --continue
 
 :: Push changes to the remote contribute branch
 git push Priyansh-666 contribute
