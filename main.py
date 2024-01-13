@@ -3,14 +3,14 @@ from tkinter import simpledialog
 import os
 import subprocess
 
-def create_bat_file(username, web_address):
+def create_bat_file(username, web_address, branch):
     # Define the content of the .bat file
     bat_content = f'''
     git init
     git add .
     git commit -m "update"
     git remote add {username} {web_address}
-    git push {username} master
+    git push {username} {branch}
     '''
 
     # Save the content to a .bat file
@@ -23,9 +23,14 @@ def get_user_inputs():
     web_address = simpledialog.askstring("Web Address", "Enter repository (URL):")
 
     if username is not None and web_address is not None:
-        # Create the .bat file
-        create_bat_file(username, web_address)
-        print("Bat file created successfully.")
+        # Ask for branch
+        branch = simpledialog.askstring("Branch", "Enter branch:")
+        if branch is not None:
+            # Create the .bat file
+            create_bat_file(username, web_address, branch)
+            print("Bat file created successfully.")
+        else:
+            print("Branch not provided. Bat file not created.")
     else:
         print("User inputs not provided. Bat file not created.")
 
