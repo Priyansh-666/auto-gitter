@@ -7,6 +7,7 @@ def create_bat_file(username, web_address, branch):
     # Define the content of the .bat file
     bat_content = f'''
     git init
+    git pull {username}/{branch}
     git add .
     git commit -m "update"
     git remote add {username} {web_address}
