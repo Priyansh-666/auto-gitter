@@ -9,18 +9,11 @@ def create_bat_file(username, web_address, branch):
     git init
     git add .
     git commit -m "update"
-    git fetch {username}
-    git rebase {username}/{branch}
-
-    git rebase --continue
-
     git remote add {username} {web_address}
     git fetch {username}
-    git merge {username}/{branch}
+    git checkout -b {username}/{branch}
     git rebase {username}/{branch}
     git rebase --continue
-
-    git merge --continue
     git branch {branch}
     git push {username} {branch}
     '''
