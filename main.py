@@ -17,6 +17,9 @@ def create_bat_file(username, web_address, branch):
     git remote add {username} {web_address}
     git fetch {username}
     git merge {username}/{branch}
+    git rebase {username}/{branch}
+    git rebase --continue
+
     git merge --continue
     git branch {branch}
     git push {username} {branch}
