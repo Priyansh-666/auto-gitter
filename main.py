@@ -7,7 +7,6 @@ def create_bat_file(username, web_address, branch):
     # Define the content of the .bat file
     bat_content = f'''
     @echo off
-    :: branch change
     git init
     git add .
     git commit -m "update"
